@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		D8DB841C24BF80C600327E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB841B24BF80C600327E64 /* AppDelegate.swift */; };
 		D8DB841E24BF80C600327E64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB841D24BF80C600327E64 /* SceneDelegate.swift */; };
-		D8DB842024BF80C600327E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB841F24BF80C600327E64 /* ViewController.swift */; };
-		D8DB842324BF80C600327E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DB842124BF80C600327E64 /* Main.storyboard */; };
 		D8DB842524BF80C700327E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DB842424BF80C700327E64 /* Assets.xcassets */; };
 		D8DB842824BF80C700327E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DB842624BF80C700327E64 /* LaunchScreen.storyboard */; };
 		D8DB843324BF80C700327E64 /* GBSHOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB843224BF80C700327E64 /* GBSHOPTests.swift */; };
@@ -38,8 +36,6 @@
 		D8DB841824BF80C600327E64 /* GBSHOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBSHOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DB841B24BF80C600327E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DB841D24BF80C600327E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8DB841F24BF80C600327E64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D8DB842224BF80C600327E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8DB842424BF80C700327E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8DB842724BF80C700327E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8DB842924BF80C700327E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		D8DB841A24BF80C600327E64 /* GBSHOP */ = {
 			isa = PBXGroup;
 			children = (
-				D8DB841B24BF80C600327E64 /* AppDelegate.swift */,
-				D8DB841D24BF80C600327E64 /* SceneDelegate.swift */,
-				D8DB841F24BF80C600327E64 /* ViewController.swift */,
-				D8DB842124BF80C600327E64 /* Main.storyboard */,
-				D8DB842424BF80C700327E64 /* Assets.xcassets */,
-				D8DB842624BF80C700327E64 /* LaunchScreen.storyboard */,
-				D8DB842924BF80C700327E64 /* Info.plist */,
+				D8DB844B24BF814200327E64 /* App */,
+				D8DB844C24BF815C00327E64 /* Core */,
+				D8DB844D24BF817C00327E64 /* Resource */,
+				D8DB844E24BF819600327E64 /* Environments */,
 			);
 			path = GBSHOP;
 			sourceTree = "<group>";
@@ -126,6 +119,71 @@
 				D8DB843F24BF80C700327E64 /* Info.plist */,
 			);
 			path = GBSHOPUITests;
+			sourceTree = "<group>";
+		};
+		D8DB844B24BF814200327E64 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D8DB841B24BF80C600327E64 /* AppDelegate.swift */,
+				D8DB841D24BF80C600327E64 /* SceneDelegate.swift */,
+				D8DB845224BF81FA00327E64 /* Flows */,
+				D8DB845024BF81D200327E64 /* Entity */,
+				D8DB844F24BF81B600327E64 /* BusinessLogic */,
+				D8DB845124BF81E400327E64 /* Assembly */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D8DB844C24BF815C00327E64 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D8DB844D24BF817C00327E64 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D8DB842424BF80C700327E64 /* Assets.xcassets */,
+				D8DB842624BF80C700327E64 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D8DB844E24BF819600327E64 /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				D8DB842924BF80C700327E64 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		D8DB844F24BF81B600327E64 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		D8DB845024BF81D200327E64 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		D8DB845124BF81E400327E64 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		D8DB845224BF81FA00327E64 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +292,6 @@
 			files = (
 				D8DB842824BF80C700327E64 /* LaunchScreen.storyboard in Resources */,
 				D8DB842524BF80C700327E64 /* Assets.xcassets in Resources */,
-				D8DB842324BF80C600327E64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8DB842024BF80C600327E64 /* ViewController.swift in Sources */,
 				D8DB841C24BF80C600327E64 /* AppDelegate.swift in Sources */,
 				D8DB841E24BF80C600327E64 /* SceneDelegate.swift in Sources */,
 			);
@@ -297,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D8DB842124BF80C600327E64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8DB842224BF80C600327E64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D8DB842624BF80C700327E64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PV86YXPL67;
-				INFOPLIST_FILE = GBSHOP/Info.plist;
+				INFOPLIST_FILE = GBSHOP/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +502,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PV86YXPL67;
-				INFOPLIST_FILE = GBSHOP/Info.plist;
+				INFOPLIST_FILE = GBSHOP/Environments/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
