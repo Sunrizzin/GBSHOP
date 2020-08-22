@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		294BCB5EC680D694E35C6998 /* Pods_GBSHOP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FB7D3D50890C5F61C9CF4A /* Pods_GBSHOP.framework */; };
 		C2BE1D236F9972D0339F9CFF /* Pods_GBSHOPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF3923E1FD38BC76619E37B /* Pods_GBSHOPTests.framework */; };
+		D84841C724C8B339002C0BE8 /* PostStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C64B0F24C7427E0004E7E5 /* PostStub.swift */; };
+		D84841C924C8B826002C0BE8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84841C824C8B826002C0BE8 /* Extension.swift */; };
 		D8639BAC24C619E600959DC2 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8639BAB24C619E600959DC2 /* RequestFactory.swift */; };
 		D8639BAE24C61A1600959DC2 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8639BAD24C61A1600959DC2 /* AbstractRequestFactory.swift */; };
 		D8639BB024C61A5700959DC2 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8639BAF24C61A5700959DC2 /* RequestRouter.swift */; };
@@ -54,6 +56,7 @@
 		9D84075BEFF512723FCE677D /* Pods-GBSHOP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBSHOP.release.xcconfig"; path = "Target Support Files/Pods-GBSHOP/Pods-GBSHOP.release.xcconfig"; sourceTree = "<group>"; };
 		A3A50DDA199391FAA1E70579 /* Pods-GBSHOP-GBSHOPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBSHOP-GBSHOPUITests.debug.xcconfig"; path = "Target Support Files/Pods-GBSHOP-GBSHOPUITests/Pods-GBSHOP-GBSHOPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CDFA68748A344EE6EB886518 /* Pods_GBSHOP_GBSHOPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBSHOP_GBSHOPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84841C824C8B826002C0BE8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		D8639BAB24C619E600959DC2 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		D8639BAD24C61A1600959DC2 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		D8639BAF24C61A5700959DC2 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		D8639BBB24C61B9600959DC2 /* ResisterResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResisterResult.swift; sourceTree = "<group>"; };
 		D8639BBE24C61BFB00959DC2 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
 		D8639BC024C61C2300959DC2 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		D8C64B0F24C7427E0004E7E5 /* PostStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStub.swift; sourceTree = "<group>"; };
 		D8DB841824BF80C600327E64 /* GBSHOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBSHOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DB841B24BF80C600327E64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8DB841D24BF80C600327E64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -199,10 +203,12 @@
 			children = (
 				D8DB841B24BF80C600327E64 /* AppDelegate.swift */,
 				D8DB841D24BF80C600327E64 /* SceneDelegate.swift */,
+				D8C64B0F24C7427E0004E7E5 /* PostStub.swift */,
 				D8DB845224BF81FA00327E64 /* Flows */,
 				D8DB845024BF81D200327E64 /* Entity */,
 				D8DB844F24BF81B600327E64 /* BusinessLogic */,
 				D8DB845124BF81E400327E64 /* Assembly */,
+				D84841C824C8B826002C0BE8 /* Extension.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -513,7 +519,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84841C924C8B826002C0BE8 /* Extension.swift in Sources */,
 				D8639BC124C61C2300959DC2 /* Auth.swift in Sources */,
+				D84841C724C8B339002C0BE8 /* PostStub.swift in Sources */,
 				D8639BAE24C61A1600959DC2 /* AbstractRequestFactory.swift in Sources */,
 				D8639BB024C61A5700959DC2 /* RequestRouter.swift in Sources */,
 				D8639BBC24C61B9600959DC2 /* ResisterResult.swift in Sources */,

@@ -7,28 +7,57 @@
 //
 
 import XCTest
+import Alamofire
+
 @testable import GBSHOP
 
 class GBSHOPTests: XCTestCase {
+    
+    let expectation = XCTestExpectation(description: "Download failed url")
+    
+    var errorParser: ErrorParserStub!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        errorParser = ErrorParserStub()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.tearDown()
+       errorParser = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+//    func testShuldDownloadAndParse() {
+//        AF.request("https://").responseCodable(errorParser: errorParser) { [weak self] (response: AFDataResponse<PostStub>) in
+//            switch response.result {
+//            case .failure(_):
+//                XCTFail()
+//            case .success(_):
+//                XCTAssert(true)
+//            }
+//            self?.expectation.fulfill()
+//        }
+//        wait(for: [expectation], timeout: 10)
+//
+//
+//
+//    }
+    
+    func testLogin() {
+        let auth = Auth(errorParser: errorParser, session: Session())
+        auth.login(userName: "test", password: "123456") { (response: AFDataResponse<LoginResult>) in
+            switch response.result {
+                case .failure(_):
+                    XCTFail()
+                case .success(let data):
+                    XCTAssertEqual(data.result, 1)
+               
+                }
+                self.expectation.fulfill()
+            }
+            wait(for: [expectation], timeout: 10)
+        
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+   
 
 }
